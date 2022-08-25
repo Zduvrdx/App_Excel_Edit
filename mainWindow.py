@@ -1,13 +1,14 @@
 from tkinter import Tk, Button, Entry
 from tkinter.ttk import Frame
-from centerWin import *
+from centerWin import centerWindow
+from selectFolder import selectFolder
 
 mainWindow = Tk()
 searchFrame = Frame(mainWindow)
 
-Button(mainWindow, text="Selecione a pasta:").grid(row=0,column=0)
-Entry(mainWindow).grid(row=1, column=0)
-Button(mainWindow, text="Realizar busca").grid(row=2,column=0)
+Button(searchFrame, text="Selecione a pasta:", command=selectFolder)
+Entry(searchFrame)
+Button(searchFrame, text="Realizar busca")
 
 #centerWindow(mainWindow)
 
